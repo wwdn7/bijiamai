@@ -5,12 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>产品分类 - 慢慢买比价网</title>
+  <title>商品列表</title>
   <link rel="icon" href="./images/favicon.ico">
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
-  <!-- <link rel="stylesheet/less" href="./less/category.less"> -->
-  <!-- <script src="./lib/less/less.js"></script> -->
-  <link rel="stylesheet" href="./less/category.css">
+  <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="./less/productlist.css">
 </head>
 
 <body>
@@ -38,22 +37,50 @@
       </div>
     </form>
   </div>
-  <!-- 分类列表 -->
+  <!-- 产品列表 -->
   <main id="main">
-    <div class="category">
-      <!-- <div class="category-first">
-        <a href="javascript:;">大家电</a>
+    <div id="list-title">
+      <div class="mui-row bb">
+        <a class="mui-col-xs-3 active">综合</a>
+        <a class="mui-col-xs-3">销量</a>
+        <a class="mui-col-xs-3">价格</a>
+        <a class="mui-col-xs-3">
+          <i class="fa fa-filter"></i>筛选</a>
       </div>
-      <div class="category-second mui-row">
-        <a href="javascript:;" class="mui-col-xs-4">平板电视</a>
-        <a href="javascript:;" class="mui-col-xs-4">空调</a>
-        <a href="javascript:;" class="mui-col-xs-4">家庭影院</a>
-        <a href="javascript:;" class="mui-col-xs-4">冰箱</a>
-        <a href="javascript:;" class="mui-col-xs-4">DVD高清播放器</a>
-        <a href="javascript:;" class="mui-col-xs-4">音响/音箱</a>
-        <a href="javascript:;" class="mui-col-xs-4">洗衣机</a>
-      </div> -->
-      
+    </div>
+    <div id="list-body">
+      <ul>
+        <li class="item bb">
+          <a href="" class="go-to"></a>
+          <div class="pic">
+            <img src="./images/p1.jpg" alt="">
+          </div>
+          <div class="info">
+            <div class="title">TCL D49A620U 49英寸 超高清4K HDR智能网络LED液晶电视</div>
+            <div class="price">
+              <em>￥</em>2599</div>
+            <div class="other clearfix">
+              <div class="mall mui-pull-left">报价(4)</div>
+              <div class="sales mui-pull-right">评论(2403)</div>
+            </div>
+          </div>
+        </li>
+        <li class="item bb">
+          <a href="" class="go-to"></a>
+          <div class="pic">
+            <img src="./images/p1.jpg" alt="">
+          </div>
+          <div class="info">
+            <div class="title">TCL D49A620U 49英寸 超高清4K HDR智能网络LED液晶电视</div>
+            <div class="price">
+              <em>￥</em>2599</div>
+            <div class="other clearfix">
+              <div class="mall mui-pull-left">报价(4)</div>
+              <div class="sales mui-pull-right">评论(2403)</div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </main>
   <footer id="footer">
@@ -72,26 +99,9 @@
     <a class="download-btn" href="#">立即打开</a>
   </div>
 </body>
-<!-- categoryTtile的tmp -->
-<script type="text/html" id="categoryTitleTmp">
-  {{each result as value i}}
-  <div class="category-first">
-    <a href="javascript:;" data-title-id = "{{value.titleId}}" data-status = "0">{{value.title}}</a>
-  </div>
-  {{/each}}
-</script>
-<!-- categoryTmp -->
-<script type="text/html" id="categoryTmp">
-  <div class="category-second mui-row" data-title-id = {{result[0].titleId}}>
-    {{each result as value i}}
-    <a href="javascript:;" class="mui-col-xs-4" data-category-id = {{value.categoryId}} dada-id = {{value._id}}>{{value.category}}</a>
-    {{/each}}
-  </div> 
-</script>
-
 <script src="./lib/artTemplate/template.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
-<script src="./js/category.js"></script>
+<script src="./js/productlist.js"></script>
 
 </html>

@@ -85,6 +85,9 @@ h5 {
 html,body{
   height: 100%;
 }
+body{
+  background-color: #f2f2f2;
+}
 html{
   font-size: 16px !important;
 }
@@ -129,7 +132,7 @@ html{
       border-radius: 15px;
       padding-left: 5%;
       padding-right: 65px;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .search-button{
@@ -149,6 +152,33 @@ html{
 
 }
 
+#footer{
+  margin-bottom: 60px;
+  >div{
+    >a{
+      background-color: #efefef;
+      display: block;
+      text-align: center;
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      &:first-child{
+        border-left: 0;
+      }
+      &:last-child{
+        >img{
+          height: 15px;
+          vertical-align: middle;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}
+
 #open-app-bar{
   position: fixed;
   bottom: 0;
@@ -157,7 +187,9 @@ html{
   height: 60px;
   background-color: #faf8f5;
   .closefix{
-    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 45px;
     padding: 19px 12px 20px;
@@ -165,15 +197,36 @@ html{
     background-size: 21px;
   }
   .icon{
-    
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: url("../images/logo.png") no-repeat center center/100% 100%;
+    top: 50%;
+    left: 46px;
+    transform: translateY(-50%);
   }
   .titlefix{
-
+    font-size: 18px;
+    color: #888;
+    margin: 12px 84px 0px 97px;
   }
   .describe{
-
+    font-size: 14px;
+    color: #999;
+    margin: 3px 84px 0px 97px;
   }
   .download-btn{
-
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background-color: #ff7700;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    width: 74px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
   }
 }
