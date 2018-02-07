@@ -68,7 +68,7 @@ body {
   height: 100%;
 }
 body {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2 !important;
 }
 html {
   font-size: 16px !important;
@@ -183,7 +183,7 @@ html {
 #open-app-bar .describe {
   font-size: 14px;
   color: #999;
-  margin: 3px 84px 0px 97px;
+  margin: 0px 84px 0px 97px;
 }
 #open-app-bar .download-btn {
   position: absolute;
@@ -202,16 +202,23 @@ html {
 #main {
   background-color: #fff;
 }
-#main #list-title .mui-row > a {
-  display: block;
+#main #list-title {
   height: 40px;
   line-height: 40px;
-  text-align: center;
+  padding: 0 10px;
+}
+#main #list-title .left-title > a {
   color: #5a5a5a;
+  text-align: center;
   font-size: 14px;
 }
-#main #list-title .mui-row > a.active {
-  color: #ed0000;
+#main .right-btn {
+  height: 100%;
+  padding: 5px 0;
+}
+#main .right-btn .btn-filter {
+  background-color: #f1f1f1;
+  height: 100%;
 }
 #main #list-body > ul > li.item {
   position: relative;
@@ -229,10 +236,12 @@ html {
   position: absolute;
   width: 140px;
   height: 100%;
-  padding: 0 10px;
 }
 #main #list-body > ul > li.item .pic > img {
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #main #list-body > ul > li.item .info {
   width: 100%;
@@ -261,5 +270,7 @@ html {
 #main #list-body > ul > li.item .info .other {
   margin-top: 4px;
   font-size: 12px;
+  height: 20px;
+  line-height: 20px;
   color: #a1a1a1;
 }

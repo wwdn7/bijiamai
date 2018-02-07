@@ -39,17 +39,27 @@
   </div>
   <!-- 产品列表 -->
   <main id="main">
-    <div id="list-title">
-      <div class="mui-row bb">
-        <a class="mui-col-xs-3 active">综合</a>
-        <a class="mui-col-xs-3">销量</a>
-        <a class="mui-col-xs-3">价格</a>
-        <a class="mui-col-xs-3">
-          <i class="fa fa-filter"></i>筛选</a>
+    <div id="list-title" class="clearfix bb">
+      <div class="mui-pull-left left-title">
+        <a href="index.html">首页</a>
+        <span>
+          <i class="fa fa-angle-right"></i>
+        </span>
+        <a href="category.html">全部分类</a>
+        <span>
+          <i class="fa fa-angle-right"></i>
+        </span>
+        <a href="javascript:;" class="currentCategory">电视</a>
+        <span>
+          <i class="fa fa-angle-right"></i>
+        </span>
+      </div>
+      <div class="mui-pull-right right-btn">
+        <button class="btn-filter"><i class="fa fa-filter"></i>筛选</button>
       </div>
     </div>
     <div id="list-body">
-      <ul>
+      <!-- <ul>
         <li class="item bb">
           <a href="" class="go-to"></a>
           <div class="pic">
@@ -65,28 +75,13 @@
             </div>
           </div>
         </li>
-        <li class="item bb">
-          <a href="" class="go-to"></a>
-          <div class="pic">
-            <img src="./images/p1.jpg" alt="">
-          </div>
-          <div class="info">
-            <div class="title">TCL D49A620U 49英寸 超高清4K HDR智能网络LED液晶电视</div>
-            <div class="price">
-              <em>￥</em>2599</div>
-            <div class="other clearfix">
-              <div class="mall mui-pull-left">报价(4)</div>
-              <div class="sales mui-pull-right">评论(2403)</div>
-            </div>
-          </div>
-        </li>
-      </ul>
+      </ul> -->
     </div>
   </main>
   <footer id="footer">
     <div class="mui-row">
-      <a href="#" class="mui-col-xs-4">登录</a>
-      <a href="#" class="mui-col-xs-4">注册</a>
+      <a href="javascript:;" class="mui-col-xs-4">登录</a>
+      <a href="javascript:;" class="mui-col-xs-4">注册</a>
       <a href="javascript:;" class="mui-col-xs-4 to-top">
         <img src="./images/top.jpg" alt="">返回顶部</a>
     </div>
@@ -95,10 +90,35 @@
     <a class="closefix" href="javascript:;"></a>
     <div class="icon"></div>
     <p class="titlefix">慢慢买</p>
-    <p class="describe">全网比价,查历史价格</p>
+    <p class="describe">你的随身购物助手</p>
     <a class="download-btn" href="#">立即打开</a>
   </div>
 </body>
+<!-- cagetory-title tmp -->
+<script type="text/html" id="titleTmp">
+  {{result[0].category}}
+</script>
+<script type="text/html" id="productTmp">
+  <ul>
+    {{each result as value i}}
+    <li class="item bb">
+      <a href="detail.html?productid={{value.productId}}&categoryid={{value.categoryId}}&comNum={{value.productComNum}}&brandName={{value.brandName}}" class="go-to"></a>
+      <div class="pic">
+        {{#value.productImg}}
+      </div>
+      <div class="info">
+        <div class="title">{{value.productName}}</div>
+        <div class="price">
+          <em>￥</em>{{value.productPrice}}</div>
+        <div class="other clearfix">
+          <div class="mall mui-pull-left">{{value.productQuote}}</div>
+          <div class="sales mui-pull-right">{{value.productCom}}</div>
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</script>
 <script src="./lib/artTemplate/template.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>

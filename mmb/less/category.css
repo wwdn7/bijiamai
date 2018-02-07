@@ -183,7 +183,7 @@ html {
 #open-app-bar .describe {
   font-size: 14px;
   color: #999;
-  margin: 3px 84px 0px 97px;
+  margin: 0px 84px 0px 97px;
 }
 #open-app-bar .download-btn {
   position: absolute;
