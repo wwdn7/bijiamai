@@ -1,4 +1,5 @@
 /* 开发的时候写* 上线的时候可以网上找初始化代码吧所有标签拷过来 */
+/* rem: pageWidth: 400 html-fontsize: 16px */
 * {
   margin: 0px;
   padding: 0px;
@@ -61,4 +62,160 @@ h5 {
 }
 .br {
   border-right: 1px solid #ccc;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #f2f2f2 !important;
+}
+html {
+  font-size: 16px !important;
+}
+#header {
+  height: 50px;
+  background-color: #ff841d;
+}
+#header .logo {
+  width: 75%;
+  padding: 12px;
+  margin-left: 5px;
+}
+#header .logo > a {
+  display: block;
+  width: 100%;
+}
+#header .logo > a > img {
+  max-height: 25px;
+}
+#header .app-down {
+  padding: 7px;
+}
+#header .app-down > a {
+  width: 100%;
+}
+#header .app-down > a > img {
+  max-height: 34px;
+}
+#search {
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+}
+#search .search-input > input {
+  background-color: #f1f1f1;
+  margin-bottom: 0;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  border-radius: 15px;
+  padding-left: 5%;
+  padding-right: 65px;
+  font-size: 14px;
+}
+#search .search-button > button {
+  height: 30px;
+  width: 63px;
+  text-align: center;
+  border: 0;
+  background-color: #ff841d;
+  border-radius: 15px;
+  position: absolute;
+  color: #fff;
+  right: 10px;
+  top: 10px;
+}
+#footer {
+  margin-bottom: 60px;
+}
+#footer > div > a {
+  background-color: #efefef;
+  display: block;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+#footer > div > a:first-child {
+  border-left: 0;
+}
+#footer > div > a:last-child > img {
+  height: 15px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+#open-app-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  height: 60px;
+  background-color: #faf8f5;
+}
+#open-app-bar .closefix {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  padding: 19px 12px 20px;
+  background: url("../images/close.png") no-repeat center center;
+  background-size: 21px;
+}
+#open-app-bar .icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: url("../images/logo.png") no-repeat center center / 100% 100%;
+  top: 50%;
+  left: 46px;
+  transform: translateY(-50%);
+}
+#open-app-bar .titlefix {
+  font-size: 18px;
+  color: #888;
+  margin: 12px 84px 0px 97px;
+}
+#open-app-bar .describe {
+  font-size: 14px;
+  color: #999;
+  margin: 0px 84px 0px 97px;
+}
+#open-app-bar .download-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  background-color: #ff7700;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  width: 74px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+}
+#main {
+  width: 100%;
+}
+#main .menu {
+  padding: 20px 0;
+  width: 100%;
+  background-color: #fff;
+}
+#main .menu > div > a {
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+#main .menu > div > a > img {
+  width: 50px;
+  margin-bottom: 3px;
 }
