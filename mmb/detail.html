@@ -60,7 +60,7 @@
           <a href="#">产品参数</a>
         </div>
         <div class="mui-col-xs-4">
-          <a href="#">产品参数</a>
+          <a href="#">优选评价</a>
         </div>
       </div>
       <div class="bj-shop">
@@ -70,7 +70,7 @@
         <div class="com-list-title">优选网友评价</div>
         <div class="com-list-body">
           <ul>
-            <li class="com-item">
+            <!-- <li class="com-item">
               <div class="com-info clearfix">
                 <div class="com-nick-name pull-left">c***7</div>
                 <div class="com-right pull-right">
@@ -79,17 +79,7 @@
                 </div>
               </div>
               <div class="com-content">真是货真价实，好电视，功能比较强，爱奇艺vip顶呱呱，视觉效果杠杠滴。只要网好，看视频一点都不卡。</div>
-            </li>
-            <li class="com-item">
-              <div class="com-info clearfix">
-                <div class="com-nick-name pull-left">c***7</div>
-                <div class="com-right pull-right">
-                  <p>2015/3/31</p>
-                  <p>购买自:京东商城</p>
-                </div>
-              </div>
-              <div class="com-content">真是货真价实，好电视，功能比较强，爱奇艺vip顶呱呱，视觉效果杠杠滴。只要网好，看视频一点都不卡。</div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -137,6 +127,24 @@
 <!-- bjshop的tmp -->
 <script type="text/html" id="bjShopTmp">
   {{#result[0].bjShop}}
+</script>
+
+<!-- 评论模板 -->
+<script type="text/html" id="comTmp">
+  <ul>
+    {{each result as value i}}
+    <li class="com-item">
+      <div class="com-info clearfix">
+        <div class="com-nick-name pull-left">{{value.comName}}</div>
+        <div class="com-right pull-right">
+          <p>{{value.comTime}}</p>
+          <p>{{value.comFrom}}</p>
+        </div>
+      </div>
+      <div class="com-content">{{value.comContent}}</div>
+    </li>
+    {{/each}}
+  </ul>
 </script>
 <script src="./lib/artTemplate/template.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>

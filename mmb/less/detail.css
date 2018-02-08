@@ -271,6 +271,7 @@ html {
   background: -o-linear-gradient(top, #ffa632, #ff9000);
 }
 #main #detail-body .bj-shop {
+  padding: 0 10px;
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #ccc;

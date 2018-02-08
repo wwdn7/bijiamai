@@ -274,3 +274,13 @@ html {
   line-height: 20px;
   color: #a1a1a1;
 }
+#main .mui-content-padded {
+  padding-bottom: 10px;
+  height: 43px;
+  width: 100%;
+}
+#main .mui-content-padded .mui-pager > li > a {
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 14px;
+}

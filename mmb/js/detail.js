@@ -6,6 +6,7 @@ $(function () {
   mmb.getSearchVal();
   mmb.setListTitle();
   mmb.getProductDetail();
+  mmb.getCom();
 })
 
 var Mmb = function () {
@@ -29,7 +30,9 @@ Mmb.prototype = {
   setListTitle: function () {
     $.ajax({
       url: 'http://127.0.0.1:9090/api/getcategorybyid',
-      data: {'categoryid': strObj.categoryId},
+      data: {
+        'categoryid': strObj.categoryId
+      },
       success: function (data) {
         console.log(data);
         strObj.category = data.result[0].category;
@@ -42,7 +45,9 @@ Mmb.prototype = {
   getProductDetail: function () {
     $.ajax({
       url: 'http://127.0.0.1:9090/api/getproduct',
-      data: {'productid':strObj.productId},
+      data: {
+        'productid': strObj.productId
+      },
       success: function (data) {
         // console.log(data);
         var html = template('productTmp', data);
@@ -51,6 +56,18 @@ Mmb.prototype = {
         $('.bj-shop').html(bjShop);
       }
     })
-
-  }
+  },
+  getCom: function () {
+    $.ajax({
+      url: 'http://127.0.0.1:9090/api/getproductcom',
+      data: {
+        'productid': strObj.productId
+      },
+      success: function (data) {
+        // console.log(data);
+        var html = template('comTmp', data);
+        $('.comment .com-list-body').html(html);
+      }
+    })
+  },
 }

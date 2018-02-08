@@ -55,28 +55,31 @@
         </span>
       </div>
       <div class="mui-pull-right right-btn">
-        <button class="btn-filter"><i class="fa fa-filter"></i>筛选</button>
+        <button class="btn-filter">
+          <i class="fa fa-filter"></i>筛选</button>
       </div>
     </div>
     <div id="list-body">
-      <!-- <ul>
-        <li class="item bb">
-          <a href="" class="go-to"></a>
-          <div class="pic">
-            <img src="./images/p1.jpg" alt="">
-          </div>
-          <div class="info">
-            <div class="title">TCL D49A620U 49英寸 超高清4K HDR智能网络LED液晶电视</div>
-            <div class="price">
-              <em>￥</em>2599</div>
-            <div class="other clearfix">
-              <div class="mall mui-pull-left">报价(4)</div>
-              <div class="sales mui-pull-right">评论(2403)</div>
-            </div>
-          </div>
-        </li>
-      </ul> -->
     </div>
+    <!-- 分页按钮 -->
+
+    <div class="mui-content-padded">
+      <ul class="mui-pager">
+        <li>
+          <a href="javascript:;" id="pre">
+            上一页
+          </a>
+        </li>
+        <li class="select-input">
+        </li>
+        <li>
+          <a href="javascript:;" id="next">
+            下一页
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </main>
   <footer id="footer">
     <div class="mui-row">
@@ -102,7 +105,8 @@
   <ul>
     {{each result as value i}}
     <li class="item bb">
-      <a href="detail.html?productid={{value.productId}}&categoryid={{value.categoryId}}&comNum={{value.productComNum}}&brandName={{value.brandName}}" class="go-to"></a>
+      <a href="detail.html?productid={{value.productId}}&categoryid={{value.categoryId}}&comNum={{value.productComNum}}&brandName={{value.brandName}}"
+        class="go-to"></a>
       <div class="pic">
         {{#value.productImg}}
       </div>

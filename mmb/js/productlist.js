@@ -1,10 +1,12 @@
 var mmb = null;
 var categoryId;
+var totalPage;
 $(function () {
   mmb = new Mmb();
   mmb.getCategoryInfo();
   mmb.getProductList(1);
   mmb.scrollTop();
+  mmb.changePage();
 })
 
 function Mmb() {
@@ -44,9 +46,11 @@ Mmb.prototype = {
           var str = data.result[i].productCom;
           data.result[i].productComNum = str.match(/\d+/)[0];
         }
-        var html = data.result.length ? template('productTmp', data) : '没有数据';
+        var html = data.result.length ? template('productTmp', data) : '暂时没有数据';
         // console.log(html);
         $('#list-body').html(html);
+        // console.log(data);
+        totalPage = Math.ceil((data.totalCount) / (data.pagesize));
       }
     })
   },
@@ -55,5 +59,17 @@ Mmb.prototype = {
       $('html').scrollTop(0);
     })
   },
-
+  changePage: function () {
+    var page = 1;
+    $('.mui-pager #next').on('click', function () {
+      page++;
+      page = page <= totalPage ? page : totalPage;
+      mmb.getProductList(page)
+    })
+    $('.mui-pager #pre').on('click', function () {
+      page--;
+      page = page >= 1 ? page : 1;
+      mmb.getProductList(page)
+    })
+  }
 }
