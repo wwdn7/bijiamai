@@ -219,3 +219,94 @@ html {
   width: 50px;
   margin-bottom: 3px;
 }
+#main .discount-bar {
+  position: relative;
+  padding: 0 10px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  background: -moz-linear-gradient(top, #ffaf47, #ff9000);
+  background: -o-linear-gradient(top, #ffaf47, #ff9000);
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+#main .discount-bar > img {
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+#main .discount-list > ul > li > div {
+  position: relative;
+  height: 120px;
+  padding: 10px 0;
+}
+#main .discount-list > ul > li > div .left {
+  position: absolute;
+  width: 120px;
+  padding: 0 10px;
+}
+#main .discount-list > ul > li > div .left > img {
+  width: 100%;
+}
+#main .discount-list > ul > li > div .right {
+  padding-left: 120px;
+  height: 100%;
+  position: relative;
+}
+#main .discount-list > ul > li > div .right .discount-title {
+  font-size: 14px;
+  line-height: 20px;
+}
+#main .discount-list > ul > li > div .right .discount-title > span {
+  color: #ff841d;
+}
+#main .discount-list > ul > li > div .right .shop-info {
+  position: absolute;
+  bottom: 10px;
+  padding-right: 3px;
+  font-size: 12px;
+  color: #a1a1a1;
+}
+#main .discount-more {
+  text-align: center;
+}
+#main .discount-more > a {
+  margin: 10px;
+  background-color: #fff;
+  width: 100%;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #666;
+}
+#main .discount-more > a > i {
+  font-size: 12px;
+}
+#main .discount-topbar {
+  position: relative;
+  padding: 0 10px;
+  margin: 10px 0;
+  height: 35px;
+  line-height: 35px;
+  background-color: #ff9000;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  background: -moz-linear-gradient(top, #ffaf47, #ff9000);
+  background: -o-linear-gradient(top, #ffaf47, #ff9000);
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+#main .discount-topbar > img {
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}

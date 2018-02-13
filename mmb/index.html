@@ -8,6 +8,7 @@
   <title>首页 - 慢慢买比价网</title>
   <link rel="icon" href="./images/favicon.ico">
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="./less/index.css">
 </head>
 
@@ -39,25 +40,16 @@
   <!-- 折扣商品列表 -->
   <main id="main">
     <div class="menu mui-row">
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
-      <div class="mui-col-xs-3"><a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div>
+      <!-- <div class="mui-col-xs-3"><a href="./category.html"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a></div> -->
     </div>
-    <div class="discount-bar">
+    <div class="discount-bar clearfix">
+        <span class="pull-left">折扣商品推荐</span>
+        <img src="./images/more.png" alt="" class="pull-right">
     </div>
     <div class="discount-list">
       <ul>
-        <li>
-          <a href="#">
+        <!-- <li>
+          <div>
             <div class="left">
               <img src="./images/discount-list-1.jpg" alt="">
             </div>
@@ -65,26 +57,19 @@
               <div class="discount-title">WD 西部数据 WD20EZRZ 台式机械硬盘 蓝盘 2TB <span>353元包邮(需用券)</span></div>
               <div class="shop-info clearfix">
                 <div class="pull-left">京东商城|02-08 16:33</div>
-                <div class="pull-right">X0</div>
+                <div class="pull-right"><i class="fa fa-commenting"></i> 0</div>
               </div>
             </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="left">
-              <img src="./images/discount-list-1.jpg" alt="">
-            </div>
-            <div class="right">
-              <div class="discount-title">WD 西部数据 WD20EZRZ 台式机械硬盘 蓝盘 2TB <span>353元包邮(需用券)</span></div>
-              <div class="shop-info clearfix">
-                <div class="pull-left">京东商城|02-08 16:33</div>
-                <div class="pull-right">X0</div>
-              </div>
-            </div>
-          </a>
-        </li>
+          </div>
+        </li> -->
       </ul>
+    </div>
+    <div class="discount-more">
+      <a href="#">更多优惠信息 <i class="fa fa-angle-double-right"></i></a>
+    </div>
+    <div class="discount-topbar clearfix">
+        <span class="pull-left">品牌排行</span>
+        <img src="./images/more.png" alt="" class="pull-right">
     </div>
   </main>
   <footer id="footer">
@@ -97,10 +82,33 @@
   </footer>
   </div>
 </body>
-
+<!-- menu的tmp -->
+<script type="text/html" id="menuTmp">
+  {{each result as value i}}
+  <div class="mui-col-xs-3 data-menuid = {{value.indexmenuId}}"><a href="{{value.titlehref}}">{{#value.img}}<span>{{value.name}}</span></a></div>
+  {{/each}}
+</script>
+<!-- productlist的tmp -->
+<script type="text/html" id="productlistTmp">
+  {{each result as value i}}
+  <li data-productid = "{{value.productId}}">
+    <div>
+      <div class="left">
+        {{#value.productImg2}}
+      </div>
+      <div class="right">
+        <div class="discount-title">{{value.productName}}</span></div>
+        <div class="shop-info clearfix">
+          <div class="pull-left">{{value.productFrom}}|{{value.productTime}}</div>
+          <div class="pull-right"><i class="fa fa-commenting"></i> {{value.productComCount}}</div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</script>
 <script src="./lib/artTemplate/template.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./js/index.js"></script>
-
 </html>
