@@ -199,6 +199,20 @@ html {
   line-height: 33px;
   text-align: center;
 }
+#app-download-bar {
+  padding: 15px 0;
+  margin-top: -50px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+#app-download-bar > p {
+  font-size: 12px;
+  margin: 0;
+}
+#app-download-bar > p > span {
+  color: red;
+}
 #main {
   width: 100%;
 }
@@ -239,6 +253,9 @@ html {
   transform: translateY(-50%);
   right: 10px;
 }
+#main .discount-list {
+  background-color: #fff;
+}
 #main .discount-list > ul > li > div {
   position: relative;
   height: 120px;
@@ -258,18 +275,22 @@ html {
   position: relative;
 }
 #main .discount-list > ul > li > div .right .discount-title {
+  padding-top: 5px;
   font-size: 14px;
   line-height: 20px;
+  height: 70%;
 }
 #main .discount-list > ul > li > div .right .discount-title > span {
   color: #ff841d;
 }
 #main .discount-list > ul > li > div .right .shop-info {
-  position: absolute;
-  bottom: 10px;
   padding-right: 3px;
+  padding-top: 10px;
   font-size: 12px;
   color: #a1a1a1;
+}
+#main .discount-list > ul > li > div .right .shop-info .pull-right {
+  margin-right: 10px;
 }
 #main .discount-more {
   text-align: center;
@@ -289,7 +310,7 @@ html {
 #main .discount-more > a > i {
   font-size: 12px;
 }
-#main .discount-topbar {
+#main .discount-bottombar {
   position: relative;
   padding: 0 10px;
   margin: 10px 0;
@@ -303,7 +324,7 @@ html {
   font-weight: bold;
   color: #fff;
 }
-#main .discount-topbar > img {
+#main .discount-bottombar > img {
   height: 20px;
   position: absolute;
   top: 50%;

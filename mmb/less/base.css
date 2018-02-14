@@ -199,3 +199,17 @@ html {
   line-height: 33px;
   text-align: center;
 }
+#app-download-bar {
+  padding: 15px 0;
+  margin-top: -50px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+#app-download-bar > p {
+  font-size: 12px;
+  margin: 0;
+}
+#app-download-bar > p > span {
+  color: red;
+}
